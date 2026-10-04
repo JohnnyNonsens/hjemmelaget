@@ -1,0 +1,36 @@
+HJEMMELAGET – TESTVERSJON FOR IPHONE (PWA)
+
+Dette er en klikkbar mobiltilpasset webapp som kan legges på iPhone-startskjermen. Den er laget for å teste flyten uten Mac.
+
+VIKTIG BEGRENSNING
+- Dette er en lokal demo. Data lagres i nettleseren på den aktuelle iPhonen.
+- Foreldre og barn kan bytte profil på samme telefon. Data synkroniseres IKKE mellom ulike telefoner.
+- PIN-kodene i denne demoen er kun for testing og er ikke sikker autentisering.
+- Ikke legg inn sensitive opplysninger eller bruk den til ekte utbetalinger ennå.
+
+SLIK FÅR DU DEN PÅ IPHONE
+Du må publisere mappen på en HTTPS-nettside. En enkel gratis måte er GitHub Pages:
+1. På iPhone eller PC, opprett/logg inn på github.com.
+2. Lag et nytt repository, f.eks. hjemmelaget-test. Velg Public.
+3. Last opp filene fra denne mappen (index.html, app.js, manifest.webmanifest, sw.js).
+4. I repository: Settings → Pages → Deploy from a branch → main → /(root) → Save.
+5. Vent til GitHub Pages viser nettadressen.
+6. Åpne nettadressen i Safari på iPhone.
+7. Trykk Del → Legg til på Hjem-skjerm → Legg til.
+
+DEMO-INNLOGGING
+Foreldre: trykk Foreldre (ingen PIN i demoen)
+Selma: 1234
+Amalie: 5678
+Foreldre kan endre barnas PIN i foreldredelen.
+
+TESTFLYT
+1. Logg inn som foreldre og opprett en valgfri oppgave, f.eks. Tømme oppvaskmaskinen.
+2. Logg ut, velg Selma og PIN 1234.
+3. Trykk Meld utført og skriv en kommentar.
+4. Logg ut og inn som foreldre.
+5. Godkjenn oppgaven. Beløpet legges til barnets opptjening.
+6. Logg inn som Selma og se egen saldo.
+
+VIDERE TIL EKTE FLERTELEFONLØSNING
+Neste steg er å koble samme grensesnitt til Supabase med foreldreautentisering, serverbasert PIN-verifisering, database og tilgangsregler. Før det bør vi ikke bruke demoen som en reell familieapp.
